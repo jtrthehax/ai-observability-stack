@@ -298,31 +298,3 @@ For each user turn:
 3. Run Layer 2 → compute style delta, hop chain, constraint resolution → emit events
 4. Run Layer 3 → route events to handlers → update event log
 5. Run Layer 4 if `STATE_BOUNDARY` or session end → emit SSE
-
----
-
-### Repo Structure
-
-```
-ai-observability-stack/
-│
-├── README.md
-├── specs/
-│   ├── middleware_spec.md              ← this document
-│   ├── console_commands.md             ← full command registry
-│   └── failure_taxonomy.md             ← named failure types
-│
-├── layers/
-│   ├── layer1_constraint_interceptor.md
-│   ├── layer2_output_monitor.md
-│   ├── layer3_event_bus.md
-│   └── layer4_state_capture.md
-│
-├── modules/
-│   └── reasoning_integrity_v3.md
-│
-└── related/
-    ├── → SDE repo
-    ├── → DSR/SLS repo
-    └── → Unified Model repo
-```
